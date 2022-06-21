@@ -1,0 +1,20 @@
+zoom: 128
+font: 15
+map-pan: false
+dark-mode: false
+GUI-font-size: 15
+GUI-button-size: 15
+GUI-button-color: black
+GUI-button-transparency: 75%
+refresh-rate: 1
+framerate: 60
+min-angle-before-rotation: 10
+display-speed: true
+display-signs: true
+display-traffic-lights: true
+show-current-location-text: true
+voice-assist: true
+total-lines-count: 86343140
+file-path:
+low-resource-consumption: true
+high-performance: false
