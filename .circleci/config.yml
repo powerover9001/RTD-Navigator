@@ -1,6 +1,6 @@
 version: 2.1
 
-on: [push, pull_request]
+#on: [push, pull_request]
 
 orbs:
   win: circleci/windows@4.1
