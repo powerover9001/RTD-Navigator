@@ -1,6 +1,6 @@
 # RTD-Navigator
 
-[![CircleCI](https://img.shields.io/circleci/build/github/powerover9001/RTD-Navigator/main)](https://dl.circleci.com/status-badge/redirect/gh/powerover9001/RTD-Navigator/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/powerover9001/RTD-Navigator/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/powerover9001/RTD-Navigator/tree/main)
 [![CodeFactor](https://www.codefactor.io/repository/github/powerover9001/rtd-navigator/badge)](https://www.codefactor.io/repository/github/powerover9001/rtd-navigator)
 
 ## THIS PROJECT IS A WORK-IN-PROGRESS [WIP]
