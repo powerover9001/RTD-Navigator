@@ -1,0 +1,37 @@
+version: 2.1
+
+on: [push, pull_request]
+
+run_windows_2022:
+  usage:
+    version: "2.1"
+    orbs:
+      win: circleci/windows@4.1
+      jobs:
+        build-windows:
+          executor: win/server-2022
+          steps:
+            - checkout
+            - run:
+              command: |
+                echo Building windows version
+                cmake . && msbuild.exe RTD-Navigator.sln
+      workflows:
+        build-workflow:
+          jobs:
+            - build-windows
+
+
+jobs:
+  build-linux:
+    machine:
+      image: ubuntu-2204:2022.04.1
+    steps:
+      - checkout
+      - run: echo Building linux version && cmake . && make
+
+
+workflows:
+  build-workflow:
+    jobs:
+      - build-linux
