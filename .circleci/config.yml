@@ -10,17 +10,21 @@ jobs:
     executor: win/server-2022
     steps:
       - checkout
-      - run: echo Building windows version
-      cmake .
-      msbuild.exe RTD-Navigator.sln
+      - run:
+          command: |
+            echo Building Windows Version
+            cmake .
+            MSBuild.exe RTD-Navigator.sln
   build-linux:
     machine:
       image: ubuntu-2204:2022.04.1
     steps:
       - checkout
-      - run: echo Building linux version
-      cmake .
-      make
+      - run:
+          command: |
+            echo Building Linux Version
+            cmake .
+            make
 
 workflows:
   build-workflow:
