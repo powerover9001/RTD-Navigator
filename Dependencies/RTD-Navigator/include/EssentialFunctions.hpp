@@ -7,17 +7,17 @@
 class EssentialFunctions{
     public:
         //Public Functions
-        bool fileExists(const std::string& filename);                                                                                   
-        //void mapUpdater(std::fstream &file, bool &nodesStatus, bool &waysStatus, bool &relationsStatus);                              
-        void updateMapData(bool& nodesStatus, bool& waysStatus, bool& relationsStatus);                                                 
-        void loadSettings();                                                                                                            
-        void loadMapData();                                                                                                             //WIP
-        std::string getSeqInQuotes(std::string& word);                                                                                  
-        void reload();                                                                                                                  //not yet
+        bool fileExists(const std::string& filename);
+        //void mapUpdater(std::fstream &file, bool &nodesStatus, bool &waysStatus, bool &relationsStatus);
+        void updateMapData(bool& nodesStatus, bool& waysStatus, bool& relationsStatus);
+        void loadSettings();
+        void loadMapData();
+        std::string& getSeqInQuotes(std::string& word);
+        void reload();
 
         //Get progress
-        long long int getDataFilesProgress(const std::string& toUpdate);                                                                
-        std::string getProgressText();                                                                                                 
+        long long int& getDataFilesProgress(const std::string& progress);
+        std::string& getProgressText();
 
         //Public Variables
         std::unordered_map<std::string, std::string> settings;
@@ -27,17 +27,17 @@ class EssentialFunctions{
 
     private:
         //Private Functions
-        bool nodesProcessing();                                                                    
-        bool waysProcessing();                                                                     
-        bool relationsProcessing();                                                                
-        void loadNodes(std::ifstream& file);                                                                                            //WIP
-        void loadWays(std::ifstream& file);                                                                                             //WIP
-        void loadRelations(std::ifstream& file);                                                                                        //not yet
+        bool nodesProcessing();
+        bool waysProcessing();
+        bool relationsProcessing();
+        void loadNodes(std::ifstream& file);
+        void loadWays(std::ifstream& file);
+        void loadRelations(std::ifstream& file);
         //void errorHandler(std::string error);
 
         //Update progress
-        void updateDataFilesProgress(const std::string& toUpdate);                                                                             
-        void updateProgressText(const std::string& progress);                                                                                  
+        void updateDataFilesProgress(const std::string& toUpdate);
+        void updateProgressText(const std::string& progress);
 
         //Private Variables
         std::string progressText;

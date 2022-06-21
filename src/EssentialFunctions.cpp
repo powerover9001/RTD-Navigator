@@ -16,7 +16,7 @@ bool EssentialFunctions::fileExists(const std::string& filename){
 
 
 //Only get number sequence between quotes
-std::string EssentialFunctions::getSeqInQuotes(std::string& word){
+std::string& EssentialFunctions::getSeqInQuotes(std::string& word){
     auto start = word.find('\"')+1;
     auto stop = word.find('\"', start);
     word = word.substr(start, stop-start);
@@ -31,7 +31,7 @@ void EssentialFunctions::updateDataFilesProgress(const std::string& progress){
 
 
 //Get the current line for nodes/ways/relations file for progress tracking
-long long int EssentialFunctions::getDataFilesProgress(const std::string& progress){
+long long int& EssentialFunctions::getDataFilesProgress(const std::string& progress){
     return EssentialFunctions::progressData[progress];
 }
 
@@ -43,7 +43,7 @@ void EssentialFunctions::updateProgressText(const std::string& progress){
 
 
 //Getting the progress text to display on the UI
-std::string EssentialFunctions::getProgressText(){
+std::string& EssentialFunctions::getProgressText(){
     return EssentialFunctions::progressText;
 }
 
@@ -123,6 +123,7 @@ void EssentialFunctions::updateMapData(bool& nodesStatus, bool& waysStatus, bool
     bool nodes=false,ways=false,relations=false;
     
     updateProgressText("Filtering Necessary Data");
+    //Need to put each processing function on a different thread
     while(!nodes && !ways && !relations){
         if(nodesStatus) nodes = nodesProcessing();
         if(waysStatus) ways = waysProcessing();

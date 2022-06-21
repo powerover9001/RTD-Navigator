@@ -4,7 +4,7 @@ version: 2.1
 
 orbs:
   win: circleci/windows@4.1
-     
+
 jobs:
   build-windows:
     executor: win/server-2022
@@ -18,7 +18,9 @@ jobs:
       image: ubuntu-2204:2022.04.1
     steps:
       - checkout
-      - run: echo Building linux version && cmake . && make
+      - run: echo Building linux version
+            cmake .
+            make
 
 workflows:
   build-workflow:
