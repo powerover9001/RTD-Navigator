@@ -16,11 +16,6 @@ run_windows_2022:
               command: |
                 echo Building windows version
                 cmake . && msbuild.exe RTD-Navigator.sln
-      workflows:
-        build-workflow:
-          jobs:
-            - build-windows
-
 
 jobs:
   build-linux:
@@ -34,4 +29,5 @@ jobs:
 workflows:
   build-workflow:
     jobs:
+      - orbs/build-windows
       - build-linux
