@@ -213,7 +213,6 @@ void EssentialFunctions::loadSettings(){
 
 //Load the map data for use
 void EssentialFunctions::loadMapData(){
-
     std::ifstream rFileNodes, rFileWays, rFileRelations;
     bool nodesFailed = false, waysFailed = false, relationsFailed = false;
 

@@ -47,9 +47,6 @@ void RenderWindow::display(){
 }
 
 
-
-
-
 void RenderWindow::cleanUp(){
     SDL_DestroyWindow(window);
 }

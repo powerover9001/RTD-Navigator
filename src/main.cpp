@@ -5,7 +5,6 @@
 #include <SDL_image.h>
 
 int main(){
-    
     RenderWindow window("RTD-Navigator");
 
     bool programRunning = true;
@@ -21,8 +20,6 @@ int main(){
         //window.render();
         window.display();
     }
-
-
 
     window.cleanUp();
     SDL_Quit();
