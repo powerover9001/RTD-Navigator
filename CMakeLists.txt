@@ -8,13 +8,14 @@ project("RTD-Navigator" VERSION 0.1 LANGUAGES CXX)
 
 
 if(WIN32)
+	message("CMake is running for windows version")
 	file(GLOB_RECURSE SRC_FILES src/*.cpp)
 
 	add_executable("${PROJECT_NAME}" ${SRC_FILES})
 
 	target_include_directories("${PROJECT_NAME}" PUBLIC
 		"${CMAKE_SOURCE_DIR}/Dependencies/RTD-Navigator/include"
-		"${CMAKE_SOURCE_DIR_DIR}/Dependencies/win-SDL2-2.0.22/include"
+		"${CMAKE_SOURCE_DIR}/Dependencies/win-SDL2-2.0.22/include"
 		"${CMAKE_SOURCE_DIR}/Dependencies/win-SDL2_image-2.0.5/include"
 	)
 
@@ -25,6 +26,7 @@ if(WIN32)
 		"${CMAKE_SOURCE_DIR}/Dependencies/win-SDL2_image-2.0.5/lib/x64/SDL2_image.lib"
 	)
 ELSEIF(UNIX)
+	message("CMake is running for linux version")
 	file(GLOB_RECURSE SRC_FILES src/*.cpp)
 	file(GLOB_RECURSE SDL2_SRC_FILES Dependencies/Linux-SDL2-2/src/*.c)
 
@@ -32,7 +34,7 @@ ELSEIF(UNIX)
 
 	target_include_directories("${PROJECT_NAME}" PUBLIC
 		"${CMAKE_SOURCE_DIR}/Dependencies/RTD-Navigator/include"
-		"${CMAKE_SOURCE_DIR_DIR}/Dependencies/Linux-SDL2-2.0.22/include"
+		"${CMAKE_SOURCE_DIR}/Dependencies/Linux-SDL2-2.0.22/include"
 		"${CMAKE_SOURCE_DIR}/Dependencies/Linux-SDL2_image-2.0.5/include"
 	)
 ELSE()
