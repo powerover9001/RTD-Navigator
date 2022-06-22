@@ -63,7 +63,3 @@ OpenGL ES 2.x, it usually comes pre-installed, but in any case:
 
 sudo apt-get install libraspberrypi0 libraspberrypi-bin libraspberrypi-dev
 -->
-
-## IMPORTANT NOTICE
-
-SOME FILES ARE REMOVED IN THE SDL2 AND SDL2_IMAGE SOURCE CODE FOR THE LINUX VERSION
