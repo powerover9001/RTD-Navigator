@@ -8,7 +8,7 @@ project("RTD-Navigator" VERSION 0.1 LANGUAGES CXX)
 
 
 if(WIN32)
-	file(GLOB_RECURSE SRC_FILES src/*.cpp CONFIGURE_DEPENDS)
+	file(GLOB_RECURSE SRC_FILES src/*.cpp)
 
 	add_executable("${PROJECT_NAME}" ${SRC_FILES})
 
@@ -25,7 +25,7 @@ if(WIN32)
 		"${CMAKE_SOURCE_DIR}/Dependencies/win-SDL2_image-2.0.5/lib/x64/SDL2_image.lib"
 	)
 ELSEIF(UNIX)
-	file(GLOB_RECURSE SRC_FILES src/*.cpp CONFIGURE_DEPENDS)
+	file(GLOB_RECURSE SRC_FILES src/*.cpp)
 	file(GLOB_RECURSE SDL2_SRC_FILES Dependencies/Linux-SDL2-2/src/*.c CONFIGURE_DEPENDS)
 
 	add_executable("${PROJECT_NAME}" ${SRC_FILES} ${SDL2_SRC_FILES})
