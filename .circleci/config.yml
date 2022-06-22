@@ -1,32 +1,32 @@
-version: 2.1
+# version: 2.1
 
-#on: [push, pull_request]
+# on: [push, pull_request]
 
 
-jobs:
-  build-linux:
-    machine:
-      image: ubuntu-2204:2022.04.1
-    steps:
-      - checkout
-      - run:
-          command: |
-            echo Building Linux Version
-            cmake .
-            cd Dependencies/Linux-SDL2-2.0.22
-            chmod +x configure
-            ./configure
-            make
-            make install
-            cd ../Linux-SDL2_image-2.0.5
-            chmod +x configure
-            ./configure
-            make
-            make install
-            cd ../..
-            make
+# jobs:
+#  build-linux:
+#    machine:
+#       image: ubuntu-2204:2022.04.1
+#     steps:
+#       - checkout
+#       - run:
+#           command: |
+#             echo Building Linux Version
+#             cmake .
+#             cd Dependencies/Linux-SDL2-2.0.22
+#             chmod +x configure
+#             ./configure
+#             make
+#             make install
+#             cd ../Linux-SDL2_image-2.0.5
+#             chmod +x configure
+#             ./configure
+#             make
+#             make install
+#             cd ../..
+#             make
 
-workflows:
-  build-workflow:
-    jobs:
-      - build-linux
+# workflows:
+#   build-workflow:
+#     jobs:
+#       - build-linux
