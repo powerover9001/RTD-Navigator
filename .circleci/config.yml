@@ -14,11 +14,11 @@ jobs:
             echo Building Linux Version
             cmake .
             cd Dependencies/Linux-SDL2-2.0.22
-            ./configure
+            sudo ./configure
             make
             make install
             cd ../Linux-SDL2_image-2.0.5
-            ./configure
+            sudo ./configure
             make
             make install
             cd ../..
