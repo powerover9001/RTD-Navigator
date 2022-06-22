@@ -26,7 +26,7 @@ if(WIN32)
 	)
 ELSEIF(UNIX)
 	file(GLOB_RECURSE SRC_FILES src/*.cpp)
-	file(GLOB_RECURSE SDL2_SRC_FILES Dependencies/Linux-SDL2-2/src/*.c CONFIGURE_DEPENDS)
+	file(GLOB_RECURSE SDL2_SRC_FILES Dependencies/Linux-SDL2-2/src/*.c)
 
 	add_executable("${PROJECT_NAME}" ${SRC_FILES} ${SDL2_SRC_FILES})
 
