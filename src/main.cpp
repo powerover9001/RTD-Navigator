@@ -2,6 +2,7 @@
 #include "RenderWindow.hpp"
 #include <iostream>
 #include <SDL.h>
+#undef main
 #include <SDL_image.h>
 
 int main(){

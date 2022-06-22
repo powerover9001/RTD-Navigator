@@ -6,9 +6,9 @@ RenderWindow::RenderWindow(const char* p_title) : window(NULL), renderer(NULL) {
                                 SDL_WINDOWPOS_CENTERED,
                                 SDL_WINDOWPOS_CENTERED,
                                 640, 360,
-                                SDL_WINDOW_SHOWN ||
-                                SDL_WINDOW_FULLSCREEN_DESKTOP ||
-                                SDL_WINDOW_BORDERLESS ||
+                                SDL_WINDOW_SHOWN |
+                                SDL_WINDOW_FULLSCREEN_DESKTOP |
+                                SDL_WINDOW_BORDERLESS |
                                 SDL_WINDOW_ALWAYS_ON_TOP
     );
 
