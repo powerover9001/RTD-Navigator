@@ -35,7 +35,7 @@ ELSEIF(UNIX)
 	target_include_directories("${PROJECT_NAME}" PUBLIC
 		"${CMAKE_SOURCE_DIR}/Dependencies/RTD-Navigator/include"
 		"${CMAKE_SOURCE_DIR}/Dependencies/Linux-SDL2-2.0.22/include"
-		"${CMAKE_SOURCE_DIR}/Dependencies/Linux-SDL2_image-2.0.5/include"
+		"${CMAKE_SOURCE_DIR}/Dependencies/Linux-SDL2_image-2.0.5"
 	)
 ELSE()
 	message([WARNING] "OPERATING SYSTEM NOT TESTED")
