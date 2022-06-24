@@ -5,7 +5,7 @@
 ```map-pan```: Leave this =true only when you want to pan around the map otherwise it is a waste of computing power  
 ```dark-mode```: Dark-mode for driving at night  
 ```GUI-font-size```: Font size for GUI  
-```GUI-button-size```: utton size for GUI  
+```GUI-button-size```: Button size for GUI  
 ```GUI-button-color```: Button color for GUI  
 ```GUI-button-transparency```: Transparency level for GUI buttons  
 ```refresh-rate```: Refresh 1 time per second (update nodes/ways/relations/poosibly positions)  
